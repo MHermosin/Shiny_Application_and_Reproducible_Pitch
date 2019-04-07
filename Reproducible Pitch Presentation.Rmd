@@ -1,0 +1,58 @@
+---
+title: "Course Project - Shiny Application and Reproducible Pitch"
+author: "Moisés Hermosín García"
+date: "7 de abril de 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+========================================================
+
+This was built for the course: **Developing Data Products** as part of the Coursera Data Science Specialization.
+
+The shiny app developed for this assignment is avalilable: https://mhermosin.shinyapps.io/External_Service_Company_Score/
+
+The source codes of ui.R and server.R and also Rpresentation are available on the GitHub repo: https://github.com/MHermosin/Shiny_Application_and_Reproducible_Pitch
+
+## Calculation and interpretation of offers
+========================================================
+The average mark for the three exams written is calculated based on the following formula:
+
+Average mark = (0.6*x + 0.25*y + 0.15*z)
+
+Where:
+
+- x = Cost Score
+- y = Execution Time Score
+- z = Quality Score
+
+## Intrepretation of Offers
+========================================================
+
+**Example:**
+For a score of **90** in Cost, **85** Execution Time and **90** Project Management.
+
+Average Score is **88,75**
+
+- Average <80 , : Failed
+- Average [80-89] , : Considered request future offers
+- Average [90-94] , : Considered as a second option
+- Average >= 95 , : Considered for the execution of the work
+
+## Shiny App: Interactive BMI Calculator
+========================================================
+
+# Sidebar panel
+- numericInput: Value of Cost score
+- numericInput: Value of Execution Time score
+- numericInput: Value of Quality score
+
+# Main panel
+- Short description of Average value
+- Make calculation on server side
+- Display the calculated average value
+- Display Intepretation
